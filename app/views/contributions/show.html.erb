@@ -1,0 +1,32 @@
+<!-- Half Banner -->
+<div class="banner-half-page" style="background-image: linear-gradient(-190deg, rgba(130,130,130,0.5) 0%, rgba(0,0,10, 0.5) 100%), url('<%= image_path 'thank_you.jpg' %>');">
+
+  <div class="banner-content">
+    <div class="avatar-on-banner" style="background-image: url('<%= cl_image_path @contribution.artist.avatar, crop: :fill, secure: true %>')"></div>
+    <h3 class='banner-font'><%= @contribution.artist.artist_name %></h3><br>
+  </div>
+</div>
+
+<!-- Container half page -->
+<div class="container container-half-page text-center" style="margin-bottom: 70px;">
+
+  <!-- Payment confirmation-->
+  <div class="confirmation-box">
+    <i class="far fa-check-square icon-size-increase icon-big-black"></i>
+    <h4 id='thanks'>Your payment went through!</h4>
+  </div>
+
+  <p>Special thanks from <strong class="header-orange" > <%= @contribution.artist.artist_name %> </strong> who has just received your contribution of <strong class="header-orange" > <%= humanized_money_with_symbol(@contribution.amount) %> </strong>.</p>
+
+  <div>
+    <%= link_to 'Continue Exploring', performances_path, class: 'btn btn-warning btn-home' %>
+  </div>
+
+  <!-- Streetbusk signiture: Logo and VP -->
+  <div class="corporate-signiture">
+    <div class="logo-circle">
+      <%= image_tag "logo_busk.svg", height: 50, class: "logo" %>
+    </div>
+    <p class='team'> - Discover local artists - </p>
+  </div>
+</div>

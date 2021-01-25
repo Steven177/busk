@@ -1,0 +1,130 @@
+.show-signup{
+  opacity: 1 !important;
+  z-index: 0 !important;
+}
+
+.input[type="submit"]{
+  margin-top: 20px;
+}
+
+.signup-back{
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  z-index: 11;
+  cursor:pointer;
+}
+
+.signup{
+  opacity: 0;
+  z-index: -1;
+
+
+  .signup-view{
+  position: fixed;
+  top: 0%;
+  width: 100%;
+  margin: auto;
+  height: 100vh;
+  z-index: -1;
+  background: white;
+  display: none;
+    i{
+      position: absolute;
+      top: 10%;
+      left: 10%;
+    }
+  }
+
+  .signup-show{
+    display: block;
+    z-index: 10;
+  }
+
+  #signup-nav{
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    z-index: 11;
+    li{
+      opacity: 0;
+      font-size: 12px;
+      color: rgba(0,0,0,0.4);
+      transition: all 0.7s ease;
+      cursor: default;
+    }
+    .show-signup-navitem{
+      opacity: 1;
+    }
+    .signup-navitem-active{
+      color: black;
+    }
+    @media(max-width: 700px){
+      top: 27%;
+    }
+  }
+
+  .signup-content{
+    transform: translate(-50%, -50%);
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: opacity 1s ease;
+    label{
+      margin-bottom: 20px;
+    }
+    input[type="submit"]{
+      margin-top: 35px;
+    }
+  }
+
+.signup-error{
+  color:red;
+  font-style: italic;
+  font-size: 12px;
+  display: inline-block;
+}
+
+.form-control{
+  border: none;
+  border-bottom: 1px solid rgba(66, 134, 244, 0.4);
+  box-shadow: none;
+  transition: border-bottom 0.5s ease;
+  background: none;
+    &:focus{
+      border-bottom: 2px solid rgba(66, 134, 244, 0.7);
+    }
+  }
+
+
+  .signup-transition-out{
+    opacity: 0;
+  }
+
+  .signup-transition-in{
+    animation-name: leftFadeIn;
+    animation-duration: 1.2s;
+  }
+
+  @keyframes leftFadeIn{
+    from{
+      margin-left: -150px;
+      opacity: 0;
+    }
+    to{
+      margin-left: 0px;
+      opacity: 1;
+    }
+  }
+
+
+
+@media (min-width: 700px){
+  .signup-content{
+    width: 60%;
+  }
+}
+
+}

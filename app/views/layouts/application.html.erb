@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title><%= meta_title %></title>
+    <meta name="description" content="<%= meta_description %>">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <%= csrf_meta_tags %>
+    <%= action_cable_meta_tag %>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+    <%#= stylesheet_pack_tag 'application', media: 'all' %>
+
+    <!-- Facebook Open Graph data -->
+    <meta property="og:title" content="<%= meta_title %>" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="<%= request.original_url %>" />
+    <meta property="og:image" content="<%= meta_image %>" />
+    <meta property="og:description" content="<%= meta_description %>" />
+    <meta property="og:site_name" content="<%= meta_title %>" />
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="<%= DEFAULT_META["twitter_account"] %>">
+    <meta name="twitter:title" content="<%= meta_title %>">
+    <meta name="twitter:description" content="<%= meta_description %>">
+    <meta name="twitter:creator" content="<%= DEFAULT_META["twitter_account"] %>">
+    <meta name="twitter:image:src" content="<%= meta_image %>">
+
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="manifest" href="/manifest.json">
+
+    <%= favicon_link_tag 'logo_busk.png' %>
+
+
+  </head>
+  <body>
+    <% contribution_id = params[:contribution_id].present? ? params[:contribution_id] : ""   %>
+    <% if current_page?('/') %>
+      <%= render 'shared/navbar' %>
+    <% elsif current_page? new_contribution_payment_path(contribution_id) %>
+
+    <% else %>
+      <%= render 'shared/navbar_hidden' %>
+      <!-- Footer for mobile device -->
+      <%= render 'shared/footer' %>
+
+    <% end %>
+
+    <%= render 'shared/flashes' %>
+    <%= render 'shared/signup' %>
+    <%= yield %>
+    <%= javascript_include_tag 'application' %>
+    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?libraries=places&key=#{ENV['GOOGLE_API_BROWSER_KEY']}" %>
+    <%= javascript_pack_tag 'application' %>
+    <%= javascript_pack_tag 'performance_slider.js' %>
+    <%= javascript_pack_tag 'map.js' %>
+  </body>
+</html>

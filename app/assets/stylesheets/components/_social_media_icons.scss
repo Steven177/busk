@@ -1,0 +1,26 @@
+.social_media_icon{
+  height: 57px;
+  width: 57px;
+  display: inline-block;
+}
+
+.youtube-icon{
+  background-image: asset-url("social-media-logos.png");
+  background-position: 92% 2%;
+}
+.instagram-icon{
+  background-image: asset-url("social-media-logos.png");
+  background-position: 36% 2%;
+}
+.twitter-icon{
+  background-image: asset-url("social-media-logos.png");
+  background-position: 8% 2%;
+}
+.facebook-icon{
+  background-image: asset-url("social-media-logos.png");
+  background-position: 65% 2%;
+}
+
+.social-media-container{
+  display:flex;
+}

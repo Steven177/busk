@@ -1,0 +1,28 @@
+.scrolling-wrapper {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.card {
+  display: inline-block;
+}
+
+.main-container{
+  height: 100vh;
+}
+
+.performances-index{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 65px;
+}
+
+.map-container{
+  flex-grow: 1;
+ height: 100vh;
+}

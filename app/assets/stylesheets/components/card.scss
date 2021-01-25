@@ -1,0 +1,145 @@
+.row {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.cards-container{
+  margin-top: 1%;
+}
+
+.card-active{
+  animation-name: activate-card;
+  animation-duration: 0.4s;
+  animation-delay: 0.3s;
+}
+
+@keyframes activate-card{
+  0% { transform: scale(1.0);}
+  50% { transform: scale(1.05);}
+  100% { transform: scale(1.0);}
+}
+
+.card {
+  box-sizing: border-box;
+  height: auto;
+  margin: 2% 0px 15px 37px;
+  border-radius: 3px;
+  box-shadow: 5px 5px 19px 3px rgba(45, 45, 45, 0.15), 0 5px 10px rgba(0, 0, 0, 0);
+  background-color: #ffffff;
+  // text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  background-size: cover !important;
+  background-position: center;
+  color: white;
+  position: relative;
+  transition: all 0.5s;
+  align-items: center;
+  display: inline-block;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  @media (orientation:portrait) {
+    width: 65vw;
+    max-width: 36vh;
+  }
+  @media (orientation:landscape) {
+    width: 40vh;
+    max-width: 36vh;
+  }
+}
+
+.card:first-child{
+  //margin-left: 50px;
+}
+
+.card-bg-img{
+  height: 20vh;
+  width: 100%;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+.performance {
+  margin-left: 15px;
+  h5{
+    margin-bottom: 0px;
+  }
+}
+
+.form-control-index {
+  margin-top: 30px;
+  margin-left: 30px;
+  height: 39px;
+  width: 80%;
+  font-size: 15px;
+  border-radius: 5px;
+}
+
+.card-description {
+ color: black;
+ padding: 5px 5%;
+}
+
+.card-description p {
+  font-size: 16px;
+  opacity: 0.7;
+  font-weight: lighter;
+  margin-bottom: 1px;
+      text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5);
+  @media (max-width: 400px){
+    font-size: 15px;
+  }
+}
+
+.card-description:hover {
+  text-decoration: none;
+}
+
+.card:hover{
+  opacity: 0.9;
+  -webkit-transform: scale(1.02);
+  transform: scale(1.02);
+}
+
+.scrolling-wrapper {
+  margin-top: -10px;
+  height: 360px;
+  width: 100%;
+}
+
+.card-image {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.card-description h2 {
+  margin-top: 15px;
+}
+
+.card-time{
+  //display: inline-block;
+}
+
+.card-time-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  .card-time-grow{
+    //flex-grow: 1;
+  }
+}
+
+.fas {
+  color: #6c8089;
+}
+
+.far {
+  color: #DA552F;
+}
+
+// .fas:hover {
+//   color: #DA552F;
+//   opacity: 0.8;
+// }

@@ -1,0 +1,108 @@
+.profile-show{
+  margin: 0px 0px 70px 0px;
+}
+
+.profile-banner {
+  height: 40vw;
+  min-height: 40vh;
+  width: 100%;
+  background-size: cover;
+
+}
+
+.profile-bg{
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100vw;
+  height: calc(55vh - 30px);
+  min-height: 52vh;
+  z-index: 1;
+  text-shadow: 1px 1px rgba(0,0,0,0.5);
+  color: white;
+  padding: 15px 10px 10px 10px;
+}
+
+.profile-overlay-wrapper{
+  position: absolute;
+  top: 15%;
+
+  h2{
+    margin-bottom: 5px;
+  }
+  i{
+    height: 45px;
+  }
+  p{
+    margin-top: 10px;
+  }
+}
+
+.profile-artist-name {
+  text-align: center;
+}
+
+.media-container {
+  background-color: whitesmoke;
+  width: 90%;
+  margin: auto;
+  @media(max-width: 400px){
+    width: 95%;
+  }
+}
+
+.flex-align-center{
+  display: flex;
+  align-items: center;
+}
+
+.profile-back-arrow{
+  margin-right: 10px;
+  margin-top: 1rem;
+  position:relative;
+}
+
+.profile_edit_social_links{
+  label{
+    width: 180px;
+    font-weight: normal;
+  }
+}
+
+.profile-avatar{
+  margin: 0px 2rem 0px 0px;
+  @media(max-width: 420px){
+    margin-right: 10px;
+  }
+}
+
+.profile-showcase{
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  .aspect-ratio {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 51%;
+  }
+  iframe{
+    position: absolute;
+   width: 100%;
+   height: 100%;
+   left: 0; top: 0;
+  }
+}
+
+.btn-height-adjust{
+  height: 40px !important;
+  padding-top: 7px !important;
+}
+
+.profile-contribute{
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}

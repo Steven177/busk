@@ -1,0 +1,34 @@
+<div class="container" style="margin-bottom: 70px;">
+    <%= simple_form_for @user, url: profile_path, method: :patch do |f| %>
+        <%= f.input :avatar %>
+        <h4>Social Media Links</h4>
+        <% yt_link = @social_media_links[0].present? ? @social_media_links[0] : "" %>
+            <div class="profile_edit_social_links">
+              <%= label "social_media[yt]", "Youtube Link" %>
+              <%= text_field_tag "social_media[yt]", yt_link %>
+            </div>
+            <% insta_link = @social_media_links[1].present? ? @social_media_links[1] : "" %>
+            <div class="profile_edit_social_links">
+              <%= label "social_media[in]", "Instagram Link"  %>
+              <%= text_field_tag "social_media[in]", insta_link %>
+            </div>
+            <% twitter_link = @social_media_links[2].present? ? @social_media_links[2] : "" %>
+            <div class="profile_edit_social_links">
+              <%= label "social_media[tw]", "Twitter Link" %>
+              <%= text_field_tag "social_media[tw]", twitter_link %>
+            </div>
+            <% fb_link = @social_media_links[3].present? ? @social_media_links[3] : ""%>
+          <div class="profile_edit_social_links">
+            <%= label "social_media[fb]", "Facebook Link" %>
+            <%= text_field_tag "social_media[fb]", fb_link %>
+          </div>
+
+        <h4>Embed your videos or music</h4>
+          <%= f.input :youtube, label:"Embedded Youtube Video" %>
+          <%= f.input :soundcloud, label:"Embedded Your SoundCloud Video" %>
+          <%= f.input :artist_name %>
+          <%= f.input :artist_description%>
+          <%= f.input :default_performance_photo %>
+          <%= f.submit %>
+    <% end %>
+</div>

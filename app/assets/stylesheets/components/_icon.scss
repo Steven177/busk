@@ -1,0 +1,138 @@
+.icon-text {
+  padding: 5px;
+  color: white;
+  margin: 0 9px;
+  vertical-align: center;
+  position: relative;
+  top: -19px;
+  left: -112px;
+  font-family: "Proza Libre", "sans-serif";
+}
+
+a, a:hover {
+  text-decoration: none;
+}
+
+.socialbtns, .socialbtns ul, .socialbtns li {
+  margin: 0;
+  // padding: 5px;
+}
+
+.socialbtns li {
+  list-style: none outside none;
+  display: inline-block;
+}
+
+.socialbtns .fasa, .fab{
+  width: 65px;
+  height: 65px;
+  margin-top: 8px;
+  color: #6c8089;
+  background-color: #FFF;
+  //border: 1px solid rgba(255,255,255,0.4);
+  box-shadow: 0px 5px 20px 4px rgba(0,0,0,0.5);
+
+  padding: 19px;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -o-border-radius: 22px;
+  transition: all 0.8s ease;
+}
+
+.socialbtns .fasc{
+  width: 154px;
+  height: 47px;
+  font-size: 22px;
+  // color: #6c8089;
+  // background-color: #FFF;
+  border: 1px solid rgba(255,255,255,0.5);
+  padding-top: 7px;
+  padding-left: 111px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 3px;
+  -o-border-radius: 22px;
+  transition: all 0.8s ease;
+}
+
+.socialbtns .fas:hover, .fasa:hover, .fab:hover {
+    // color: orange;
+    // background-color: #6c8089;
+    // opacity: 0.8;
+    // border: 1px solid #6c8089;
+}
+
+.attend-button, .contribute-button {
+    font-size: 30px;
+    color: orange !important;
+    background-color: #6c8089 !important;
+    //border: 1px solid #6c8089;
+}
+
+.comment-button{
+    color: white !important;
+    background-color: #6c8089 !important;
+    border: 1px solid #6c8089;
+    border-radius: 3px;
+}
+
+.attend-button{
+      padding: 19px 19px 35px 19px !important;
+}
+
+.attend-button:hover, .contribute-button:hover, .comment-button:hover{
+    opacity: 0.8 !important;
+    background-color: #FFF !important;
+
+    color: #6c8089 !important;
+    border: 1px solid #6c8089;
+    color: #6c8089 !important;
+}
+
+
+.attend-button:hover p, .contribute-button:hover p, .comment-button:hover p{
+  color: #6c8089 !important;
+}
+
+.socialbtns{
+
+}
+
+#new_attendance, #new_contribution_form{
+  button{
+    background-color: rgba(255,255,255,0);
+    border: rgba(0,0,0,0.3);
+    color: white;
+    &:focus{
+      border: none;
+    }
+  }
+
+}
+
+#contribute-button, #comment-button{
+  background-color: rgba(255,255,255,0);
+  border: rgba(0,0,0,0);
+  cursor: default;
+}
+
+.icon-orange{
+  color: #E67E22;
+}
+
+.icon-size-increase{
+  font-size: 50px;
+}
+
+.footer-icon{
+  color: white;
+}
+
+.icon-small{
+  font-size: 15px;
+}
+
+.icon-big-black{
+  font-size: 30px;
+  color: black;
+}

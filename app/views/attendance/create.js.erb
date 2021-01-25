@@ -1,0 +1,31 @@
+
+function addAttendee(attendHTML, user_detail){
+  const attendanceList = document.querySelectorAll('.attend-overlap');
+  const attendanceUl = document.querySelector('.attendance');
+  const noAttendP = document.querySelector('.no-attend');
+  if (attendanceList.length > 0){
+    attendanceList[attendanceList.length - 1].insertAdjacentHTML('afterend', attendHTML);
+  }
+  else{
+    attendanceUl.insertAdjacentHTML('afterbegin', attendHTML);
+  }
+
+    if (noAttendP){
+      noAttendP.style.display = "none";
+    }
+}
+
+function showAttendError(){
+  const attendHeader = document.querySelector('.attending-error-container');
+  if (attendHeader.children.length > 0){
+  }
+  else{
+    attendHeader.insertAdjacentHTML('beforeend', "<p>You're already attending this event</p>");
+  }
+}
+
+<% if @attendance.valid? %>
+  addAttendee('<%= j render "attendance/attend", user: @attendance.user %> ')
+<% else %>
+  showAttendError();
+<% end %>
